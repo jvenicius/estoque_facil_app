@@ -24,29 +24,6 @@ class Home extends StatelessWidget {
           ],
         ),
         centerTitle: true,
-        bottom: const PreferredSize(
-          preferredSize: Size.fromHeight(
-              80), // Altura preferida para o widget abaixo do AppBar
-          child: Column(
-            children: [
-              CircleAvatar(
-                // Avatar
-                backgroundImage:
-                    AssetImage('assets/images/avatar.jpg'), // Imagem do avatar
-                radius: 30, // Raio do avatar
-              ),
-              SizedBox(height: 8), // Espaçamento entre o avatar e o texto
-              Text(
-                // Nome da pessoa
-                'Nome da Pessoa',
-                style: TextStyle(
-                  fontSize: 16,
-                  color: Colors.white, // Cor do texto
-                ),
-              ),
-            ],
-          ),
-        ),
       ),
       body: const Center(
         child: Text(
