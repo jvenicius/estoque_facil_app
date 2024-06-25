@@ -1,69 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:estoque_facil/screens/home.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const EstoqueFacil());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class EstoqueFacil extends StatelessWidget {
+  const EstoqueFacil({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Estoque Fácil',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.black12),
-        useMaterial3: true,
-      ),
-      home: const MyHomePage(title: 'Sistema Estoque Fácil!'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'Você apertou no botão essa quantidade de vezes:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
+        colorScheme: ColorScheme.fromSwatch(
+          primarySwatch: Colors.blue,
+        ).copyWith(
+          secondary: Colors.blueAccent[700],
+        ),
+        buttonTheme: ButtonThemeData(
+          buttonColor: Colors.blueAccent[700],
+          textTheme: ButtonTextTheme.accent,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      home: const Home(),
     );
   }
 }
