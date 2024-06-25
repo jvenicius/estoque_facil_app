@@ -8,13 +8,12 @@ void main() {
 class EstoqueFacil extends StatelessWidget {
   const EstoqueFacil({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
         colorScheme: ColorScheme.fromSwatch(
-          primarySwatch: Colors.blue,
+          primarySwatch: Colors.grey,
         ).copyWith(
           secondary: Colors.blueAccent[700],
         ),
