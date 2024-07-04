@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:estoque_facil/screens/home.dart';
-
+// import 'package:estoque_facil/screens/dashboard.dart';
+import 'package:estoque_facil/screens/login.dart';
 void main() {
   runApp(const EstoqueFacil());
 }
@@ -22,7 +22,7 @@ class EstoqueFacil extends StatelessWidget {
           textTheme: ButtonTextTheme.accent,
         ),
       ),
-      home: const Home(),
+      home: const Login(),
     );
   }
 }
